@@ -5,8 +5,13 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.client.RestTemplate;
+
+
+
+import org.springframework.context.ApplicationContext;
 
 import static org.springframework.boot.SpringApplication.run;
 
@@ -24,6 +29,6 @@ public class SocialMediaApp {
      * @throws InterruptedException 
      */
     public static void main(String[] args) throws InterruptedException {
-        SpringApplication.run(SocialMediaApp.class, args);
+        ApplicationContext applicationContext = SpringApplication.run(SocialMediaApp.class, args);        
     }
 }
